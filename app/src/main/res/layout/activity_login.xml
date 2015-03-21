@@ -68,4 +68,5 @@
         android:layout_alignRight="@+id/buttonLogin"
         android:layout_alignEnd="@+id/buttonLogin"
         android:onClick="onClickRegister" />
+
 </RelativeLayout>
