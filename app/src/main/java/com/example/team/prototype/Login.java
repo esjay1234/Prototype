@@ -29,12 +29,6 @@ public class Login extends ActionBarActivity {
         password=(EditText) findViewById(R.id.editPass);
 //parse changes by ayudh
         // Enable Local Datastore.
-        enableLocalDatastore(this);
-
-        initialize(this, "mVtygHVRCgLsDioXizZYb5gnsKxHdPKPABQEpu4u", "13NZ7KiaeKuXV5LBGUIBQN1Tv31XF27aVF6rkIHk");
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
 
 
     }
@@ -65,6 +59,12 @@ public class Login extends ActionBarActivity {
     public void onClickLogin(View V) {
         String usernameString=username.getText().toString();
         String passwordString=password.getText().toString();
+        enableLocalDatastore(this);
+
+        initialize(this, "mVtygHVRCgLsDioXizZYb5gnsKxHdPKPABQEpu4u", "13NZ7KiaeKuXV5LBGUIBQN1Tv31XF27aVF6rkIHk");
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("username", usernameString);
+        testObject.saveInBackground();
     }
 
     public void onClickRegister(View V) {
