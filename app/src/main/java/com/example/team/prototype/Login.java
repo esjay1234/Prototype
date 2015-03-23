@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.parse.Parse;
+import com.parse.ParseObject;
+
+import static com.parse.Parse.*;
+
 
 public class Login extends ActionBarActivity {
 //ayudh checking in again
@@ -21,6 +26,14 @@ public class Login extends ActionBarActivity {
         setContentView(R.layout.activity_login);
         username=(EditText) findViewById(R.id.editUser);
         password=(EditText) findViewById(R.id.editPass);
+//parse changes by ayudh
+        // Enable Local Datastore.
+        enableLocalDatastore(this);
+
+        initialize(this, "mVtygHVRCgLsDioXizZYb5gnsKxHdPKPABQEpu4u", "13NZ7KiaeKuXV5LBGUIBQN1Tv31XF27aVF6rkIHk");
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
 
 
     }
