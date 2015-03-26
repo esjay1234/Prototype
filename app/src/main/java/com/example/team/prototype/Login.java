@@ -1,5 +1,6 @@
 package com.example.team.prototype;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,7 +15,7 @@ import com.parse.ParseObject;
 import static com.parse.Parse.*;
 
 
-public class Login extends ActionBarActivity {
+public class Login extends Activity {
 //ayudh checking in again
 //esjay checking in
     //hellos
